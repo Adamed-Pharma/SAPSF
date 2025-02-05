@@ -4,7 +4,7 @@ function createModal() {
     const modalContent = createModalContent();
     const closeModal = createCloseModal();
     const iframeContainer = createIframeContainer();
-    const iframe = createIframe('https://performancemanager5.successfactors.eu/sf/xi/ui/genericobject/pages/mdf/mdf.xhtml?&#t=cust_etr&n=1');
+    const iframe = createIframe('https://performancemanager5.successfactors.eu/xi/ui/genericobject/pages/mdf/mdf.xhtml?&#t=cust_etr&n=1');
 
     //build html
     document.body.appendChild(background);
