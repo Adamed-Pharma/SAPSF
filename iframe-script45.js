@@ -147,7 +147,7 @@ function addClickListenerToButtons(buttons, background, iframeContainer) {
         if (button.name !=="OK"){
             button.addEventListener('click', () => handleCloseModalClick(background, iframeContainer));
         }
-    });
+    }, 500);
 }
 
 function handleWindowClick(event, background, iframeContainer) {
