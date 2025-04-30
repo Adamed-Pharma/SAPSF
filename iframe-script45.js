@@ -144,10 +144,13 @@ function setupAcceptButtonListener(iframe, background, iframeContainer) {
 
 function addClickListenerToButtons(buttons, background, iframeContainer) {
     buttons.forEach(button => {
-        if (button.name !=="OK"){
-            button.addEventListener('click', () => handleCloseModalClick(background, iframeContainer));
-        }
-    }, 500);
+       // tylko przyciski inne niż OK (np. Submit) zamykają z opóźnieniem
+       if (button.name !== "OK") {
+           button.addEventListener('click', () => {
+               setTimeout(() => handleCloseModalClick(background, iframeContainer), 1000);
+           });
+       }
+   });
 }
 
 function handleWindowClick(event, background, iframeContainer) {
